@@ -8,7 +8,7 @@
 [![devDependency Status](https://david-dm.org/armand1m/generate-random-points/master/dev-status.svg)](https://david-dm.org/armand1m/generate-random-points/master#info=devDependencies)
 
 [![Build Status](https://travis-ci.org/armand1m/generate-random-points.svg?branch=master)](https://travis-ci.org/armand1m/generate-random-points)
-[![Coverage Status](https://coveralls.io/repos/armand1m/generate-random-points/badge.svg?branch=master&service=github)](https://coveralls.io/github/armand1m/generate-random-points?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/armand1m/generate-random-points/badge.svg?branch=master)](https://coveralls.io/github/armand1m/generate-random-points?branch=master)
 
 Generates random geolocation objects, in the form of plain-old javascript objects.
 
