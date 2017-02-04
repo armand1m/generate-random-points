@@ -31,7 +31,7 @@ const {
   generateRandomPoints
 } = require('generate-random-points')
 
-let options = {
+const options = {
   centerPosition: {
     lat: 24.23,
     lng: 23.12
@@ -41,25 +41,33 @@ let options = {
 }
 
 let listOfPoints = generateRandomPoints(options.centerPosition, options.radius, options.count)
+let singlePoint = generateRandomPoint(options.centerPosition, options.radius)
 
-console.log(listOfPoints)
+return {
+  listOfPoints,
+  singlePoint
+}
 ```
 
 It should produce something like this:
 
 ```json
-[
-  { latitude: 24.229716908541928, longitude: 23.11553173995286 },
-  { latitude: 24.234458720495013, longitude: 23.10966586687313 }
-]
-```
-
-
-```
-let point = generateRandomPoint(options.centerPosition, options.radius)
-
-console.log(point)
-
+{
+  "listOfPoints": [
+    {
+      "latitude": 24.229716908541928,
+      "longitude": 23.11553173995286
+    },
+    {
+      "latitude": 24.234458720495013,
+      "longitude": 23.10966586687313
+    }
+  ],
+  "singlePoint": {
+    "latitude": 24.232510757349,
+    "longitude": 23.12242028161285
+  }
+}
 ```
 
 ### API
