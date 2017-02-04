@@ -1,10 +1,10 @@
 const { generateRandomPoints, generateRandomPoint } = require('../')
-const chai = require("chai");
+const chai = require('chai')
 
-const { expect } = chai;
+const { expect } = chai
 
-chai.should();
-chai.use(require('chai-things'));
+chai.should()
+chai.use(require('chai-things'))
 
 const CENTER_POSITION = {
   latitude: 24.23,
