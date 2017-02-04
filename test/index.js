@@ -31,8 +31,10 @@ describe('module: generate-random-points', function () {
   describe('function: generateRandomPoints(center, radius, count)', function () {
     it('should generate 10 random unique points', () => {
       let result = generateRandomPoints(CENTER_POSITION, RADIUS, 100)
+      let resultAsSet = new Set(result)
 
       expect(result).to.be.an('array')
+      expect(resultAsSet.size).to.be.equals(result.length)
 
       NEEDED_KEYS.forEach(key => result.should.all.have.property(key))
     })
