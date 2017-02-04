@@ -1,3 +1,5 @@
+'use strict'
+
 const randomPoints = require('../')
 const generateRandomPoint = randomPoints.generateRandomPoint
 const generateRandomPoints = randomPoints.generateRandomPoints
