@@ -1,4 +1,7 @@
-const { generateRandomPoints, generateRandomPoint } = require('../')
+const randomPoints = require('../')
+const generateRandomPoint = randomPoints.generateRandomPoint
+const generateRandomPoints = randomPoints.generateRandomPoints
+
 const chai = require('chai')
 
 const { expect } = chai

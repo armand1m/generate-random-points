@@ -48,6 +48,6 @@ function generateRandomPoint (center, radius) {
 }
 
 module.exports = {
-  generateRandomPoint,
-  generateRandomPoints
+  generateRandomPoint: generateRandomPoint,
+  generateRandomPoints: generateRandomPoints
 }
