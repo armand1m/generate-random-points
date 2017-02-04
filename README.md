@@ -14,13 +14,14 @@ Generates random geolocation objects, in the form of plain-old javascript object
 
 ## Usage
 
- - Install with npm
+Install it with `npm` or `yarn` and use as a normal module
 
+### Installing
 ```sh
-$ npm install generate-random-points
+$ npm install generate-random-points --save
 ```
 
- - Generating multiple points
+Consider this code:
 
 ```js
 'use strict'
@@ -36,20 +37,58 @@ let options = {
     lng: 23.12
   },
   radius: 1000,
-  count: 100
+  count: 2
 }
 
 let listOfPoints = generateRandomPoints(options.centerPosition, options.radius, options.count)
 
 console.log(listOfPoints)
+```
 
-//  [
-//    { latitude: 24.229716908541928, longitude: 23.11553173995286 },
-//    { latitude: 24.234458720495013, longitude: 23.10966586687313 } ...
+It should produce something like this:
 
+```json
+[
+  { latitude: 24.229716908541928, longitude: 23.11553173995286 },
+  { latitude: 24.234458720495013, longitude: 23.10966586687313 }
+]
+```
+
+
+```
 let point = generateRandomPoint(options.centerPosition, options.radius)
 
 console.log(point)
 
-//  { latitude: 24.23715000367521, longitude: 23.117770408949074 }
 ```
+
+### API
+
+#### function generateRandomPoints (center, radius, count)
+```
+/**
+ * Generates number of random geolocation points given a center and a radius.
+ *
+ * @param  {Object} center A JS object with lat and lng attributes.
+ * @param  {number} radius Radius in meters.
+ * @param  {number} count Number of points to generate.
+ * @return {array} Array of Objects with lat and lng attributes.
+ */
+```
+
+#### function generateRandomPoint (center, radius)
+```
+/**
+ * Generates number of random geolocation points given a center and a radius.
+ *
+ * Reference URL: http://goo.gl/KWcPE.
+ * @param  {Object} center A JS object with 'latitude' and 'longitude' attributes.
+ * @param  {number} radius Radius in meters.
+ * @return {Object} The generated random points as JS object with latitude and longitude attributes.
+ */
+ ```
+
+### Credits
+
+All those involved in this stackoverflow page: http://goo.gl/KWcPE
+@mkhatib for publishing this snippet of code in this gist https://gist.github.com/mkhatib/5641004
