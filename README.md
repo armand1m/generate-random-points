@@ -33,8 +33,8 @@ const {
 
 const options = {
   centerPosition: {
-    lat: 24.23,
-    lng: 23.12
+    latitude: 24.23,
+    longitude: 23.12
   },
   radius: 1000,
   count: 2
